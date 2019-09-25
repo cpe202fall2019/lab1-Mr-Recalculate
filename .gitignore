@@ -1,2 +1,6 @@
 #Visual Studio Junk
 .vs
+
+#Coverage junk
+*.pyc
+*.coverage
