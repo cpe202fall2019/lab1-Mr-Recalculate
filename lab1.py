@@ -1,12 +1,11 @@
 """finds the max of a list of numbers and returns the value (not the index)
    If int_list is empty, returns None. If list is None, raises ValueError"""
 def max_list_iter(int_list):  # must use iteration not recursion
-    if int_list == []:
-        raise ValueError('list is empty')
-        return None 
+    if not int_list:
+        raise ValueError('list is empty') 
     else:
-        temp = -1
-        for x in int_list:
+        temp = int_list[0]
+        for x in range(len(int_list)):
             if x > temp:
                 temp = x
             return temp
