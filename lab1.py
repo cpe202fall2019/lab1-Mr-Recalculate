@@ -3,12 +3,12 @@
 def max_list_iter(int_list):  # must use iteration not recursion
     if not int_list:
         raise ValueError('list is empty') 
-    else:
-        temp = int_list[0]
-        for x in range(len(int_list)):
-            if x > temp:
-                temp = x
-            return temp
+
+    temp = int_list[0]
+    for x in range(len(int_list)):
+        if int_list[x] > temp:
+            temp = int_list[x]
+    return temp
 
 
 
