@@ -44,8 +44,8 @@ def bin_search(target, low, high, int_list):
    #recursive calls
    #if target is bigger than value at idx
    elif int_list[idx] < target:
-       return bin_search(target, idx, high, int_list)
+       return bin_search(target, idx+1, high, int_list)
     #if target is smaller than value at idx
    elif int_list[idx] > target:
-       return bin_search(target, low, idx, int_list)
+       return bin_search(target, low, idx-1, int_list)
        
