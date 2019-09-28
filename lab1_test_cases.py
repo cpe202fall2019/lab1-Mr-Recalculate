@@ -168,6 +168,12 @@ class TestLab1(unittest.TestCase):
         low = 0
         high = len(list_val)-1
         self.assertEqual(bin_search(2, low, high, list_val), None)
+    
+    def test_bin_seach_neg(self):
+        list_val = [-1,-2,-3,-4,-5]
+        low = 0
+        high = len(list_val)-1
+        self.assertEqual(bin_search(-1, low, high, list_val), 0)
 
 
 if __name__ == "__main__":
