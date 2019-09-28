@@ -37,12 +37,19 @@ def bin_search(target, low, high, int_list):
    if not int_list:
        raise ValueError('list is empty')
    idx = (low+high)//2
+   #base cases
    if int_list[idx] == target:
        return idx
+   #handles low edgecase
+   elif int_list[low] == target:
+      return low
+   #handles high edgecase
    elif int_list[high] == target:
       return high
-   elif low+1 == high:
+   #if low and high are the same or one apart, return None
+   elif low+1 == high or low == high:
        return None
+   #recursive calls
    #if target is bigger than value at idx
    elif int_list[idx] < target:
        return bin_search(target, idx, high, int_list)
